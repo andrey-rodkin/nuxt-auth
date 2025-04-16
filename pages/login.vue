@@ -15,6 +15,7 @@ const credentials = reactive<Schema>({
   password: ''
 })
 
+const toast = useToast()
 
 async function login() {
   $fetch('/api/login', {
@@ -25,7 +26,10 @@ async function login() {
         await refreshSession()
         await navigateTo('/')
       })
-      .catch(() => alert('Bad credentials'))
+      .catch(() => toast.add({
+        description: 'Введены неверные данные авторизации. Попробуйте ещё раз',
+        color: 'error'
+      }))
 }
 </script>
 
