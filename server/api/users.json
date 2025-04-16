@@ -36,18 +36,6 @@
         "_comment": "Пользователь Nicholas Crew с логином nic.crew@creds.com и паролем '1atr48asf03'"
     },
     {
-        "id": "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f",
-        "name": "Nicholas",
-        "surname": "Crew",
-        "credentials": {
-            "username": "nic.crew@creds.com",
-            "passphrase": "23c2b519b1e2cd4bbaf5f68f58024785"
-        },
-        "status": "active",
-        "created": "01.03.2025 12:56:28",
-        "_comment": "Пользователь Nicholas Crew с логином nic.crew@creds.com и паролем '1atr48asf03'"
-    },
-    {
         "id": "a1b2c3d4-e5f6-7g8h-9i0j-1k2l3m4n5o6p",
         "name": "Emily",
         "surname": "Stone",
