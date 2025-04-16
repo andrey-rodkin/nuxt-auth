@@ -1,35 +1,278 @@
 [
     {
+        "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
         "name": "David",
         "surname": "Jones",
         "credentials":{
             "username": "david.jones@creds.com",
             "passphrase": "52ccca432ab28afd90969084c061b23c"
         },
-        "active": true,
+        "status": "active",
         "created": "03.03.2025 10:00:21",
         "_comment": "Пользователь David Jones с логином david.jones@creds.com и паролем '8u3&s-1uda'"
     },
     {
+        "id": "b5c6d7e8-f9a0-4b1c-8d2e-3f4a5b6c7d8e",
         "name": "Samantha",
         "surname": "Robertson",
         "credentials":{
             "username": "sam.robertson@creds.com",
             "passphrase": "cefdd8f05b00320c8ff42f8734f96633"
         },
-        "active": true,
+        "status": "active",
         "created": "03.03.2025 10:28:13",
         "_comment": "Пользователь Samantha Robertson с логином sam.robertson@creds.com и паролем '0k91sa639'"
     },
     {
+        "id": "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f",
         "name": "Nicholas",
         "surname": "Crew",
         "credentials":{
             "username": "nic.crew@creds.com",
             "passphrase": "23c2b519b1e2cd4bbaf5f68f58024785"
         },
-        "active": false,
+        "status": "active",
         "created": "01.03.2025 12:56:28",
         "_comment": "Пользователь Nicholas Crew с логином nic.crew@creds.com и паролем '1atr48asf03'"
-    }  
+    },
+    {
+        "id": "c9d0e1f2-a3b4-4c5d-6e7f-8a9b0c1d2e3f",
+        "name": "Nicholas",
+        "surname": "Crew",
+        "credentials": {
+            "username": "nic.crew@creds.com",
+            "passphrase": "23c2b519b1e2cd4bbaf5f68f58024785"
+        },
+        "status": "active",
+        "created": "01.03.2025 12:56:28",
+        "_comment": "Пользователь Nicholas Crew с логином nic.crew@creds.com и паролем '1atr48asf03'"
+    },
+    {
+        "id": "a1b2c3d4-e5f6-7g8h-9i0j-1k2l3m4n5o6p",
+        "name": "Emily",
+        "surname": "Stone",
+        "credentials": {
+            "username": "emily.stone@creds.com",
+            "passphrase": "45d6f7e8c9b0a1f2e3d4c5b6a7f8e9d"
+        },
+        "status": "active",
+        "created": "02.03.2025 09:15:42",
+        "_comment": "Пользователь Emily Stone с логином emily.stone@creds.com и паролем 'p9w2k5s8h4'"
+    },
+    {
+        "id": "b2c3d4e5-f6g7-8h9i-0j1k-2l3m4n5o6p7q",
+        "name": "Michael",
+        "surname": "Brown",
+        "credentials": {
+            "username": "michael.brown@creds.com",
+            "passphrase": "67e8f9d0c1b2a3f4e5d6c7b8a9f0e1d"
+        },
+        "status": "inactive",
+        "created": "03.03.2025 14:23:17",
+        "_comment": "Пользователь Michael Brown с логином michael.brown@creds.com и паролем 'q7h3k9m2n5'"
+    },
+    {
+        "id": "d3e4f5g6-h7i8-9j0k-1l2m-3n4o5p6q7r8s",
+        "name": "Sophia",
+        "surname": "Miller",
+        "credentials": {
+            "username": "sophia.miller@creds.com",
+            "passphrase": "89f0e1d2c3b4a5f6e7d8c9b0a1f2e3d"
+        },
+        "status": "active",
+        "created": "04.03.2025 11:45:33",
+        "_comment": "Пользователь Sophia Miller с логином sophia.miller@creds.com и паролем 'r4t9y1u7i8'"
+    },
+    {
+        "id": "e4f5g6h7-i8j9-0k1l-2m3n-4o5p6q7r8s9t",
+        "name": "Daniel",
+        "surname": "Wilson",
+        "credentials": {
+            "username": "daniel.wilson@creds.com",
+            "passphrase": "12a3b4c5d6e7f8g9h0i1j2k3l4m5n6o"
+        },
+        "status": "active",
+        "created": "05.03.2025 16:37:21",
+        "_comment": "Пользователь Daniel Wilson с логином daniel.wilson@creds.com и паролем 'o9i8u7y6t5'"
+    },
+    {
+        "id": "f5g6h7i8-j9k0-1l2m-3n4o-5p6q7r8s9t0u",
+        "name": "Olivia",
+        "surname": "Taylor",
+        "credentials": {
+            "username": "olivia.taylor@creds.com",
+            "passphrase": "34b5c6d7e8f9g0h1i2j3k4l5m6n7o8p"
+        },
+        "status": "inactive",
+        "created": "06.03.2025 08:12:55",
+        "_comment": "Пользователь Olivia Taylor с логином olivia.taylor@creds.com и паролем 'p0o9i8u7y6'"
+    },
+    {
+        "id": "g6h7i8j9-k0l1-2m3n-4o5p-6q7r8s9t0u1v",
+        "name": "James",
+        "surname": "Anderson",
+        "credentials": {
+            "username": "james.anderson@creds.com",
+            "passphrase": "56c7d8e9f0g1h2i3j4k5l6m7n8o9p0q"
+        },
+        "status": "active",
+        "created": "07.03.2025 13:24:39",
+        "_comment": "Пользователь James Anderson с логином james.anderson@creds.com и паролем 'q1w2e3r4t5'"
+    },
+    {
+        "id": "h7i8j9k0-l1m2-3n4o-5p6q-7r8s9t0u1v2w",
+        "name": "Emma",
+        "surname": "Thomas",
+        "credentials": {
+            "username": "emma.thomas@creds.com",
+            "passphrase": "78d9e0f1g2h3i4j5k6l7m8n9o0p1q2r"
+        },
+        "status": "active",
+        "created": "08.03.2025 10:53:47",
+        "_comment": "Пользователь Emma Thomas с логином emma.thomas@creds.com и паролем 'r6y7u8i9o0'"
+    },
+    {
+        "id": "i8j9k0l1-m2n3-4o5p-6q7r-8s9t0u1v2w3x",
+        "name": "William",
+        "surname": "Jackson",
+        "credentials": {
+            "username": "william.jackson@creds.com",
+            "passphrase": "90e1f2g3h4i5j6k7l8m9n0o1p2q3r4s"
+        },
+        "status": "inactive",
+        "created": "09.03.2025 17:41:12",
+        "_comment": "Пользователь William Jackson с логином william.jackson@creds.com и паролем 's4x5c6v7b8'"
+    },
+    {
+        "id": "j9k0l1m2-n3o4-5p6q-7r8s-9t0u1v2w3x4y",
+        "name": "Ava",
+        "surname": "White",
+        "credentials": {
+            "username": "ava.white@creds.com",
+            "passphrase": "12f3g4h5i6j7k8l9m0n1o2p3q4r5s6t"
+        },
+        "status": "active",
+        "created": "10.03.2025 09:27:18",
+        "_comment": "Пользователь Ava White с логином ava.white@creds.com и паролем 't7g8b9n0m1'"
+    },
+    {
+        "id": "k0l1m2n3-o4p5-6q7r-8s9t-0u1v2w3x4y5z",
+        "name": "Benjamin",
+        "surname": "Harris",
+        "credentials": {
+            "username": "benjamin.harris@creds.com",
+            "passphrase": "34g5h6i7j8k9l0m1n2o3p4q5r6s7t8u"
+        },
+        "status": "active",
+        "created": "11.03.2025 14:35:44",
+        "_comment": "Пользователь Benjamin Harris с логином benjamin.harris@creds.com и паролем 'u9j8h7g6f5'"
+    },
+    {
+        "id": "l1m2n3o4-p5q6-7r8s-9t0u-1v2w3x4y5z6a",
+        "name": "Mia",
+        "surname": "Martin",
+        "credentials": {
+            "username": "mia.martin@creds.com",
+            "passphrase": "56h7i8j9k0l1m2n3o4p5q6r7s8t9u0v"
+        },
+        "status": "inactive",
+        "created": "12.03.2025 11:48:29",
+        "_comment": "Пользователь Mia Martin с логином mia.martin@creds.com и паролем 'v3f4c5d6e7'"
+    },
+    {
+        "id": "m2n3o4p5-q6r7-8s9t-0u1v-2w3x4y5z6a7b",
+        "name": "Henry",
+        "surname": "Thompson",
+        "credentials": {
+            "username": "henry.thompson@creds.com",
+            "passphrase": "78i9j0k1l2m3n4o5p6q7r8s9t0u1v2w"
+        },
+        "status": "active",
+        "created": "13.03.2025 16:52:10",
+        "_comment": "Пользователь Henry Thompson с логином henry.thompson@creds.com и паролем 'w8n9b0v1c2'"
+    },
+    {
+        "id": "n3o4p5q6-r7s8-9t0u-1v2w-3x4y5z6a7b8c",
+        "name": "Charlotte",
+        "surname": "Garcia",
+        "credentials": {
+            "username": "charlotte.garcia@creds.com",
+            "passphrase": "90j1k2l3m4n5o6p7q8r9s0t1u2v3w4x"
+        },
+        "status": "active",
+        "created": "14.03.2025 10:11:37",
+        "_comment": "Пользователь Charlotte Garcia с логином charlotte.garcia@creds.com и паролем 'x3z4a5s6d7'"
+    },
+    {
+        "id": "o4p5q6r7-s8t9-0u1v-2w3x-4y5z6a7b8c9d",
+        "name": "Alexander",
+        "surname": "Martinez",
+        "credentials": {
+            "username": "alexander.martinez@creds.com",
+            "passphrase": "12k3l4m5n6o7p8q9r0s1t2u3v4w5x6y"
+        },
+        "status": "inactive",
+        "created": "15.03.2025 13:22:05",
+        "_comment": "Пользователь Alexander Martinez с логином alexander.martinez@creds.com и паролем 'y7u8i9o0p1'"
+    },
+    {
+        "id": "p5q6r7s8-t9u0-1v2w-3x4y-5z6a7b8c9d0e",
+        "name": "Amelia",
+        "surname": "Robinson",
+        "credentials": {
+            "username": "amelia.robinson@creds.com",
+            "passphrase": "34l5m6n7o8p9q0r1s2t3u4v5w6x7y8z"
+        },
+        "status": "active",
+        "created": "16.03.2025 08:45:19",
+        "_comment": "Пользователь Amelia Robinson с логином amelia.robinson@creds.com и паролем 'z2x3c4v5b6'"
+    },
+    {
+        "id": "q6r7s8t9-u0v1-2w3x-4y5z-6a7b8c9d0e1f",
+        "name": "Liam",
+        "surname": "Clark",
+        "credentials": {
+            "username": "liam.clark@creds.com",
+            "passphrase": "56m7n8o9p0q1r2s3t4u5v6w7x8y9z0a"
+        },
+        "status": "active",
+        "created": "17.03.2025 15:33:51",
+        "_comment": "Пользователь Liam Clark с логином liam.clark@creds.com и паролем 'a1s2d3f4g5'"
+    },
+    {
+        "id": "r7s8t9u0-v1w2-3x4y-5z6a-7b8c9d0e1f2g",
+        "name": "Harper",
+        "surname": "Rodriguez",
+        "credentials": {
+            "username": "harper.rodriguez@creds.com",
+            "passphrase": "78n9o0p1q2r3s4t5u6v7w8x9y0z1a2b"
+        },
+        "status": "inactive",
+        "created": "18.03.2025 12:44:23",
+        "_comment": "Пользователь Harper Rodriguez с логином harper.rodriguez@creds.com и паролем 'b6n7m8k9j0'"
+    },
+    {
+        "id": "s8t9u0v1-w2x3-4y5z-6a7b-8c9d0e1f2g3h",
+        "name": "Ethan",
+        "surname": "Lewis",
+        "credentials": {
+            "username": "ethan.lewis@creds.com",
+            "passphrase": "90o1p2q3r4s5t6u7v8w9x0y1z2a3b4c"
+        },
+        "status": "active",
+        "created": "19.03.2025 17:55:07",
+        "_comment": "Пользователь Ethan Lewis с логином ethan.lewis@creds.com и паролем 'c5v6f7g8h9'"
+    },
+    {
+        "id": "t9u0v1w2-x3y4-5z6a-7b8c-9d0e1f2g3h4i",
+        "name": "Evelyn",
+        "surname": "Lee",
+        "credentials": {
+            "username": "evelyn.lee@creds.com",
+            "passphrase": "12p3q4r5s6t7u8v9w0x1y2z3a4b5c6d"
+        },
+        "status": "active",
+        "created": "20.03.2025 09:18:34",
+        "_comment": "Пользователь Evelyn Lee с логином evelyn.lee@creds.com и паролем 'd4e5f6g7h8'"
+    }
 ]
