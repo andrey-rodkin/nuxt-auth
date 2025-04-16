@@ -13,6 +13,9 @@ type User = {
 const users: User[] = await $fetch('/api/users', {
   method: 'GET',
 })
+
+const UBadge = resolveComponent('UBadge')
+
 const columns: TableColumn<User>[] = [
   {
     accessorKey: 'id',
@@ -33,6 +36,16 @@ const columns: TableColumn<User>[] = [
   {
     accessorKey: 'status',
     header: 'Статус',
+    cell: ({ row }) => {
+      const color = {
+        active: 'success' as const,
+        inactive: 'error' as const
+      }[row.getValue('status') as string]
+
+      return h(UBadge, { class: 'capitalize', variant: 'subtle', color }, () =>
+          row.getValue('status')
+      )
+    }
   },
   {
     accessorKey: 'created',
