@@ -1,75 +1,25 @@
-# Nuxt Minimal Starter
+# Демонстрация работы с Nuxt.js
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Предварительные настройки
 
-## Setup
+- Установите NodeJs v20: https://nodejs.org 
+- Включите coreutils: `corepack enable`
+- Переключитесь на актуальный yarn: `yarn set version berry`
+- Установите зависимости: `yarn`
 
-Make sure to install dependencies:
+## Запуск
+- Запустите отладочный сервер: `yarn dev` и откройте http://localhost:3000
 
-```bash
-# npm
-npm install
+## Сборка
+- Сборка проекта: `yarn build`
 
-# pnpm
-pnpm install
+## Архитектурные решения
+- API запросы не стал разделять на группы, т.к. в рамках тестового задания это не требуется. В реальном проекте я бы разделил на группы по функциональности
+- Для сессий используется механизм предоставляемый nuxt-auth-utils
+- Используются UI компоненты из Nuxt UI, т.к. они входят в экосистему Nuxt и используют Tailwind CSS, что позволяет настраивать свои темы без переписывания кода приложения
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+# Деплой
+Для деплоя я бы собрал отдельный docker-контейнер с приложением и с node, который бы запускался на сервере. Это позволит:
+- просто перезапустить контейнер при каких либо проблемах (но надо будет настроить мониторинг сначала)
+- добавить балансировщик нагрузки и просто запустить дополнительные контейнеры, если потребуется масштабирование
+- организовать практически бесшовный деплой путём канареечных релизов (если есть балансировщик и минимум 2 запущенных контейнера)
