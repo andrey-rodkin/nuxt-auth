@@ -12,9 +12,7 @@ type User = {
   created: string
 }
 
-const users: User[] = await $fetch('/api/users', {
-  method: 'GET',
-})
+const users: User[] = (await useFetch('/api/users')).data.value as User[] || []
 
 const createds = [...new Set(users.map(({created}) => created.split(' ')[0]).sort())]
 const emails = users.map(({email}) => email)

@@ -18,18 +18,19 @@ const credentials = reactive<Schema>({
 const toast = useToast()
 
 async function login() {
-  $fetch('/api/login', {
-    method: 'POST',
-    body: credentials
-  })
-      .then(async () => {
-        await refreshSession()
-        await navigateTo('/')
-      })
-      .catch(() => toast.add({
-        description: 'Введены неверные данные авторизации. Попробуйте ещё раз',
-        color: 'error'
-      }))
+  try {
+    await useFetch('/api/login', {
+      method: 'POST',
+      body: credentials
+    })
+    await refreshSession()
+    await navigateTo('/')
+  } catch {
+    toast.add({
+      description: 'Введены неверные данные авторизации. Попробуйте ещё раз',
+      color: 'error'
+    })
+  }
 }
 </script>
 
