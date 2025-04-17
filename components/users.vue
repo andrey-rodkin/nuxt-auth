@@ -16,35 +16,30 @@ const users: User[] = await $fetch('/api/users', {
   method: 'GET',
 })
 
-const statuses = [...new Set(users.map(({status}) => status.toUpperCase()))]
+const createds = [...new Set(users.map(({created}) => created.split(' ')[0]).sort())]
 const emails = users.map(({email}) => email)
 
 const UBadge = resolveComponent('UBadge')
 
 const columns: TableColumn<User>[] = [
   {
-    id: 'id',
     accessorKey: 'id',
     header: '#',
   },
   {
-    id: 'name',
     accessorKey: 'name',
     header: 'Имя',
   },
   {
-    id: 'surname',
     accessorKey: 'surname',
     header: 'Фамилия',
   },
   {
-    id: 'email',
     accessorKey: 'email',
     header: 'E-mail',
     filterFn: 'arrIncludesSome'
   },
   {
-    id: 'status',
     accessorKey: 'status',
     header: 'Статус',
     cell: ({ row }) => {
@@ -57,10 +52,8 @@ const columns: TableColumn<User>[] = [
           row.getValue('status')
       )
     },
-    filterFn: 'equalsString'
   },
   {
-    id: 'created',
     accessorKey: 'created',
     header: 'Дата регистрации',
   }
@@ -70,7 +63,7 @@ const table = useTemplateRef('table')
 
 const columnFilters = ref([
   {
-    id: 'status',
+    id: 'created',
     value: ''
   },
   {
@@ -80,7 +73,7 @@ const columnFilters = ref([
 ])
 
 const clearFilters = () => {
-  table?.value?.tableApi?.getColumn('status')?.setFilterValue('')
+  table?.value?.tableApi?.getColumn('created')?.setFilterValue('')
   table?.value?.tableApi?.getColumn('email')?.setFilterValue([])
 }
 
@@ -95,10 +88,11 @@ onMounted(() => {
   <div class="p-4">
     <div class="flex gap-4">
       <USelect
-          :model-value="table?.tableApi?.getColumn('status')?.getFilterValue() as Status | undefined"
-          :items="statuses"
-          :placeholder="'Выберите статус...'"
-          @update:model-value="table?.tableApi?.getColumn('status')?.setFilterValue($event)"
+          :model-value="table?.tableApi?.getColumn('created')?.getFilterValue() as Status | undefined"
+          :items="createds"
+          :placeholder="'Выберите дату...'"
+          @update:model-value="table?.tableApi?.getColumn('created')?.setFilterValue($event)"
+          class="w-60"
       />
 
       <USelect
@@ -106,8 +100,8 @@ onMounted(() => {
           :items="emails"
           :placeholder="'Выберите один или несколько e-mail...'"
           multiple
-          @update:model-value="($event) => table?.tableApi?.getColumn('email')?.setFilterValue($event || [])"
-          class="w-2xl"
+          @update:model-value="table?.tableApi?.getColumn('email')?.setFilterValue($event)"
+          class="w-full"
       />
 
       <UButton
