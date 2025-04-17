@@ -12,17 +12,19 @@ const md5 = (value: string): string => crypto.MD5(value).toString()
 export default defineEventHandler(async (event) => {
     const { email, password } = await readValidatedBody(event, bodySchema.parse)
 
-    const user = users.find(
+    const foundUser = users.find(
         ({credentials: {username, passphrase}}) => username === email && passphrase === md5(password)
     )
 
-    if (user) {
+    if (foundUser) {
+        const {credentials, _comment, ...user} = foundUser
+
         await setUserSession(event, {user})
         return {}
     }
 
     throw createError({
         statusCode: 401,
-        message: 'Bad credentials'
+        message: 'Not authenticated'
     })
 })
